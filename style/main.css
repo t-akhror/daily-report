@@ -1,0 +1,34 @@
+.startDay {
+  display: block;
+  margin: 0 auto;
+  font-size: 20px;
+}
+.wallet {
+  font-size: 72px;
+  font-weight: bold;
+}
+.add {
+  font-size: 50px;
+}
+#startBtn {
+}
+#main {
+  display: none;
+}
+
+.hide {
+  /* display: none !important; */
+  animation-name: example;
+  animation-duration: 4s;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
+  opacity: 1;
+}
+@keyframes example {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

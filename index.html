@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lesson 23</title>
+    <link rel="stylesheet" href="style/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+    <!--  Modal StartDay btn -->
+    <div class="container my-5">
+        <div  id="startBtn">
+            <div class="alert alert-primary alert-dismissible w-50 mx-auto hide" id="alertTop">
+                <h4 class="text-center"><strong>Assalomu Alaykum!</strong> Kuningiz hayirli o'tsin.</h4>
+            </div>
+
+            <button type="button" 
+            data-bs-toggle="modal" 
+            data-bs-target="#startDay" 
+            class="btn btn-primary w-25 startDay"           
+            >
+            Kunni boshlash
+        </button>
+        </div>
+        
+        <!--  Modal StartDay Content -->
+        <div class="modal fade" id="startDay">
+            <div class="modal-dialog modal-dialog-centered ">
+            <div class="modal-content">
+        
+                <!-- Modal Header -->
+                <div class="modal-header">
+                <h4 class="modal-title">Ma'lumotlarni kiriting!</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+        
+                <!-- Modal body -->
+                <div class="modal-body">
+                <form action="#" name="myForm">
+                    <input type="text" name="fName" id="fName" class="form-control mb-3 " placeholder="Ism...">
+                    <input type="text" name="lName" id="lName" class="form-control mb-3" placeholder="Familya...">
+                    <input type="number" name="money" id="money" class="form-control mb-3" placeholder="Summa...">
+                    <button type="button" onclick="startDay()"data-bs-dismiss="modal" class="btn btn-primary w-25 "> Saqlash</button>
+                    </form>
+                </div>
+        
+            </div>
+            </div>
+    </div>
+
+    <!-- Main  -->
+   <main id="main">
+    <div class="row w-75 mx-auto mb-4 ">
+        <div class="border text-secondary border-secondary  p-3 d-flex justify-content-between "> 
+            <div class="info">
+                <h4 id="firstName"> </h4>
+                <h4 id="lastName"> </h4>
+                <h6 id="date"> </h6>
+            </div>
+            <div class="totalAmount">
+                
+                <span class="wallet" id="totalAmount"></span>
+                <span class="me-4" id="sum"> </span>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex w-75 mx-auto px-0 ">
+        <div class="spending w-50 me-2">
+            <div class="d-flex justify-content-between align-items-center title bg-danger text-white px-3 ">
+                <h4> Xarajatlar: <span class="ms-3"id="allSpending">0 </span> so'm </h4>
+                <span type="button" data-bs-toggle="modal" data-bs-target="#spending" class="add">+</span>
+            </div> 
+            <div id="sCard">
+                
+            </div>
+        </div>
+        <div class="income w-50 ms-2 ">
+            <div class="d-flex justify-content-between align-items-center title bg-success text-white px-3 ">
+                <h4>Daromadlar:  <span class="ms-3" id="allIncome">0 </span> so'm </h4>
+                <span type="button" data-bs-toggle="modal" data-bs-target="#income" class="add">+</span>
+            </div>
+            <div id="iCard">
+                
+            </div>            
+        </div>
+       <!-- Spending  Modal -->
+          <div class="modal fade" id="spending">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header bg-danger text-white ">
+                  <h4 class="modal-title">Xarajat </h4>
+                  <button type="button" class="btn-close text-white" data-bs-dismiss="modal"></button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                  <form action="#" name="sForm">
+                    <label for="sAmount">Summa: </label>
+                    <input type="number" name="sAmount" id="sAmount" class="form-control mb-3">
+                    <label for="sReason">Maqsad: </label>
+                    <input type="text" name="sReason" id="sReason" class="form-control mb-3">
+                    <button type="button" onclick="spending()" data-bs-dismiss="modal"  class="btn btn-danger w-50 d-block mx-auto">Saqlash</button>
+                  </form>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        <!-- Income  Modal -->
+        <div class="modal fade" id="income">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                  
+                <!-- Modal Header -->
+                <div class="modal-header bg-success text-white">
+                  <h4 class="modal-title">Daromad</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form action="#" name="iForm">
+                        <label for="iAmount">Summa: </label>
+                        <input type="number" name="amount" id="iAmount" class="form-control mb-3">
+                        <label for="iReason">Maqsad: </label>
+                        <input type="text" name="iReason" id="iReason" class="form-control mb-3">
+                        <button type="button" onclick="income()" data-bs-dismiss="modal"  class="btn btn-success w-50 d-block mx-auto">Saqlash</button>
+                      </form>
+                </div>
+
+              </div>
+            </div>
+          </div>
+    </div>
+    </div>
+   </main>
+  
+
+
+  
+    
+    <script src="style/js/bootstrap.bundle.min.js"></script>
+    <script src="style/js/main.js"></script>
+</body>
+</html>
