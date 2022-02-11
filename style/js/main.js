@@ -43,7 +43,7 @@ function startDay(){
     if (fName.trim().length>0 && lName.trim().length >0 && money.trim().length >0){
         initialMoney=parseInt(money)
         document.getElementById('firstName').innerHTML=fName
-        document.getElementById('initAmount').innerHTML='Day started with $'+parseInt(money)
+        document.getElementById('initAmount').innerHTML='(Day started with $'+money)
         document.getElementById('totalAmount').innerHTML=new Intl.NumberFormat().format(money)
         document.getElementById('date').innerHTML=sana
         document.getElementById('sum').innerHTML="$";
