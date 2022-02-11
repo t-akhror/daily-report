@@ -29,8 +29,8 @@ function drawSpending(){
             document.getElementById('allIncome').innerHTML=new Intl.NumberFormat().format(initialIncome);
             document.getElementById('iCard').innerHTML +=
         '<div class="card border-success my-3">'+
-        '<div class="card-body">'+ new Intl.NumberFormat().format(allTransaction[i].amount)+
-        ' so\'m <span class="badge bg-success float-end">'+allTransaction[i].time+'</span></div>'+
+        '<div class="card-body"> $'+ new Intl.NumberFormat().format(allTransaction[i].amount)+
+        ' <span class="badge bg-success float-end">'+allTransaction[i].time+'</span></div>'+
         '<div class="card-footer">'+ allTransaction[i].reason+' </div></div>'
         }
     }
