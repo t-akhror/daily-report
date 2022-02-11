@@ -5,9 +5,9 @@ let allTransaction=[
     
 ];
 const d=new Date();
-// const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-const months = ["Yanvar", "Fevral", "Mart", "Aprel", "May", "Iyun", "Iyul", "August", "Sentabr", "Oktabr", "Noyabr", "Dekabr"];
-let sana=(d.getDate()+1)+'-'+months[d.getMonth()]+' '+d.getFullYear()+'-yil'
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+//const months = ["Yanvar", "Fevral", "Mart", "Aprel", "May", "Iyun", "Iyul", "August", "Sentabr", "Oktabr", "Noyabr", "Dekabr"];
+let sana=(d.getDate()+1)+'-'+months[d.getMonth()]+' '+d.getFullYear()+'-Year'
 
 
 
@@ -21,8 +21,8 @@ function drawSpending(){
             document.getElementById('allSpending').innerHTML=new Intl.NumberFormat().format(initialSpending);
             document.getElementById('sCard').innerHTML +=
         '<div class="card border-danger my-3">'+
-        '<div class="card-body">'+ new Intl.NumberFormat().format(allTransaction[i].amount)+
-        ' so\'m <span class="badge bg-danger float-end">'+allTransaction[i].time+'</span></div>'+
+        '<div class="card-body"> $'+ new Intl.NumberFormat().format(allTransaction[i].amount)+
+        ' <span class="badge bg-danger float-end">'+allTransaction[i].time+'</span></div>'+
         '<div class="card-footer">'+ allTransaction[i].reason+' </div></div>'
         }else {
             
@@ -47,11 +47,11 @@ function startDay(){
         document.getElementById('lastName').innerHTML=lName
         document.getElementById('totalAmount').innerHTML=new Intl.NumberFormat().format(money)
         document.getElementById('date').innerHTML=sana
-        document.getElementById('sum').innerHTML="so'm";
+        document.getElementById('sum').innerHTML="$";
         document.getElementById('startBtn').style.display='none'
         document.getElementById('main').style.display='block'   
     }else{
-        alert('Hamma ma\'lumotni kiriting')
+        alert('Please fill all fields!')
     }
 }
 function spending(){
