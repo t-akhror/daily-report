@@ -39,18 +39,19 @@ function drawSpending(){
 
 function startDay(){
     let fName=document.forms['myForm']['fName'].value;
+    // let lName=document.forms['myForm']['lName'].value;
     let money=document.forms['myForm']['money'].value;
-    if (fName.trim().length>0 &&  money.trim().length >0){
+    if (fName.trim().length>0 && money.trim().length >0){
         initialMoney=parseInt(money)
         document.getElementById('firstName').innerHTML=fName
-        document.getElementById('initAmount').innerHTML=('Day started with $'+money)
+        document.getElementById('initAmount').innerHTML=('$'+money)
         document.getElementById('totalAmount').innerHTML=new Intl.NumberFormat().format(money)
         document.getElementById('date').innerHTML=sana
         document.getElementById('sum').innerHTML="$";
         document.getElementById('startBtn').style.display='none'
         document.getElementById('main').style.display='block'   
     }else{
-        alert('Please fill all fields!')
+        alert('Please, fill al fields!')
     }
 }
 function spending(){
