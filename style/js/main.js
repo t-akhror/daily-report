@@ -40,7 +40,7 @@ function drawSpending(){
 function startDay(){
     let fName=document.forms['myForm']['fName'].value;
     let money=document.forms['myForm']['money'].value;
-    if (fName.trim().length>0 && lName.trim().length >0 && money.trim().length >0){
+    if (fName.trim().length>0 &&  money.trim().length >0){
         initialMoney=parseInt(money)
         document.getElementById('firstName').innerHTML=fName
         document.getElementById('initAmount').innerHTML='(Day started with $'+money)
