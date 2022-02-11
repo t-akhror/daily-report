@@ -13,7 +13,7 @@
     <div class="container my-5">
         <div  id="startBtn">
             <div class="alert alert-primary alert-dismissible w-50 mx-auto hide" id="alertTop">
-                <h4 class="text-center"><strong>Assalomu Alaykum!</strong> Kuningiz hayirli o'tsin.</h4>
+                <h4 class="text-center"><strong>Hello!</strong> Have a nice day.</h4>
             </div>
 
             <button type="button" 
@@ -21,7 +21,7 @@
             data-bs-target="#startDay" 
             class="btn btn-primary w-25 startDay"           
             >
-            Kunni boshlash
+            Start a Day
         </button>
         </div>
         
@@ -32,17 +32,17 @@
         
                 <!-- Modal Header -->
                 <div class="modal-header">
-                <h4 class="modal-title">Ma'lumotlarni kiriting!</h4>
+                <h4 class="modal-title">Who are you?!</h4>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
         
                 <!-- Modal body -->
                 <div class="modal-body">
                 <form action="#" name="myForm">
-                    <input type="text" name="fName" id="fName" class="form-control mb-3 " placeholder="Ism...">
-                    <input type="text" name="lName" id="lName" class="form-control mb-3" placeholder="Familya...">
-                    <input type="number" name="money" id="money" class="form-control mb-3" placeholder="Summa...">
-                    <button type="button" onclick="startDay()"data-bs-dismiss="modal" class="btn btn-primary w-25 "> Saqlash</button>
+                    <input type="text" name="fName" id="fName" class="form-control mb-3 " placeholder="First name...">
+                    <input type="text" name="lName" id="lName" class="form-control mb-3" placeholder="Last Name...">
+                    <input type="number" name="money" id="money" class="form-control mb-3" placeholder="Money for today...">
+                    <button type="button" onclick="startDay()"data-bs-dismiss="modal" class="btn btn-primary w-25 "> Save</button>
                     </form>
                 </div>
         
@@ -69,7 +69,7 @@
     <div class="d-flex w-75 mx-auto px-0 ">
         <div class="spending w-50 me-2">
             <div class="d-flex justify-content-between align-items-center title bg-danger text-white px-3 ">
-                <h4> Xarajatlar: <span class="ms-3"id="allSpending">0 </span> so'm </h4>
+                <h4> Expense:  $ <span class="ms-3"id="allSpending">0 </span></h4>
                 <span type="button" data-bs-toggle="modal" data-bs-target="#spending" class="add">+</span>
             </div> 
             <div id="sCard">
@@ -78,7 +78,7 @@
         </div>
         <div class="income w-50 ms-2 ">
             <div class="d-flex justify-content-between align-items-center title bg-success text-white px-3 ">
-                <h4>Daromadlar:  <span class="ms-3" id="allIncome">0 </span> so'm </h4>
+                <h4>Inmoce: $  <span class="ms-3" id="allIncome">0 </span> </h4>
                 <span type="button" data-bs-toggle="modal" data-bs-target="#income" class="add">+</span>
             </div>
             <div id="iCard">
@@ -92,17 +92,17 @@
 
                 <!-- Modal Header -->
                 <div class="modal-header bg-danger text-white ">
-                  <h4 class="modal-title">Xarajat </h4>
+                  <h4 class="modal-title">Expense </h4>
                   <button type="button" class="btn-close text-white" data-bs-dismiss="modal"></button>
                 </div>
                 <!-- Modal body -->
                 <div class="modal-body">
                   <form action="#" name="sForm">
-                    <label for="sAmount">Summa: </label>
+                    <label for="sAmount">Amount: </label>
                     <input type="number" name="sAmount" id="sAmount" class="form-control mb-3">
-                    <label for="sReason">Maqsad: </label>
+                    <label for="sReason">Purpose: </label>
                     <input type="text" name="sReason" id="sReason" class="form-control mb-3">
-                    <button type="button" onclick="spending()" data-bs-dismiss="modal"  class="btn btn-danger w-50 d-block mx-auto">Saqlash</button>
+                    <button type="button" onclick="spending()" data-bs-dismiss="modal"  class="btn btn-danger w-50 d-block mx-auto">Save</button>
                   </form>
                 </div>
 
@@ -116,17 +116,17 @@
                   
                 <!-- Modal Header -->
                 <div class="modal-header bg-success text-white">
-                  <h4 class="modal-title">Daromad</h4>
+                  <h4 class="modal-title">Income</h4>
                   <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <!-- Modal body -->
                 <div class="modal-body">
                     <form action="#" name="iForm">
-                        <label for="iAmount">Summa: </label>
+                        <label for="iAmount">Amount: </label>
                         <input type="number" name="amount" id="iAmount" class="form-control mb-3">
-                        <label for="iReason">Maqsad: </label>
+                        <label for="iReason">Purpose: </label>
                         <input type="text" name="iReason" id="iReason" class="form-control mb-3">
-                        <button type="button" onclick="income()" data-bs-dismiss="modal"  class="btn btn-success w-50 d-block mx-auto">Saqlash</button>
+                        <button type="button" onclick="income()" data-bs-dismiss="modal"  class="btn btn-success w-50 d-block mx-auto">Save</button>
                       </form>
                 </div>
 
